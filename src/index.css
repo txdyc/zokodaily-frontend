@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Plus Jakarta Sans", sans-serif;
+
+  --color-surface: #f9f9f9;
+  --color-surface-container-low: #f3f3f3;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #e8e8e8;
+  --color-surface-container-highest: #e2e2e2;
+  
+  --color-primary: #00502e;
+  --color-primary-container: #006b3f;
+  --color-primary-fixed: #9df5bd;
+  
+  --color-secondary: #715c00;
+  --color-secondary-container: #ffd31a;
+  --color-on-secondary-container: #705b00;
+  
+  --color-tertiary: #900014;
+  --color-tertiary-container: #bd001e;
+  
+  --color-on-surface: #1b1b1b;
+  --color-on-surface-variant: #3f4941;
+  --color-outline: #6f7a71;
+  --color-outline-variant: #bec9bf;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .heritage-gradient {
+    background: linear-gradient(135deg, #00502e 0%, #006b3f 100%);
+  }
+  
+  .glass-header {
+    @apply bg-white/80 backdrop-blur-md;
+  }
+
+  .asymmetric-crop {
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+  }
+}

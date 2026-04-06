@@ -1,0 +1,7 @@
+{
+  "name": "Ghana Life",
+  "description": "A premium editorial and community directory app for Ghana, featuring news, local services, and business listings.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
