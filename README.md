@@ -19,3 +19,34 @@ View your app in AI Studio: https://ai.studio/apps/7fafd120-44c8-47f9-a924-d2943
 3. Set `VITE_API_BASE_URL` in `.env.local` when your Flask API runs outside the default `http://127.0.0.1:5000`
 4. Run the app:
    `npm run dev`
+
+## Ubuntu build and deploy
+
+- Script: `scripts/deploy_ubuntu.sh`
+- Default deploy path: `/var/www/zokodaily-frontend`
+- After deployment it runs: `systemctl reload nginx`
+
+### Usage
+
+```bash
+cd frontend
+chmod +x ./scripts/deploy_ubuntu.sh
+./scripts/deploy_ubuntu.sh
+```
+
+### Optional environment variables
+
+- `DEST_DIR` — target directory, default `/var/www/zokodaily-frontend`
+- `NGINX_SERVICE` — nginx service name, default `nginx`
+- `INSTALL_DEPS` — `true|false|auto`, default `auto`
+- `NODE_BIN` — explicit Node.js binary path
+- `NPM_BIN` — explicit npm binary path
+
+### Example
+
+```bash
+DEST_DIR=/var/www/zokodaily-frontend \
+NGINX_SERVICE=nginx \
+INSTALL_DEPS=true \
+./scripts/deploy_ubuntu.sh
+```
