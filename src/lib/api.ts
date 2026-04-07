@@ -106,7 +106,7 @@ type PlaceDetail = {
   image_urls: string[];
 };
 
-const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:5000').replace(/\/$/, '');
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || 'https://daily.zokomart.africa').replace(/\/$/, '');
 const FALLBACK_ARTICLE_IMAGE = 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1200&q=80';
 const FALLBACK_BUSINESS_IMAGE = 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80';
 
